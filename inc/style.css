@@ -59,13 +59,18 @@ img {
   color: #fff;
   padding: 10px 30px;
   text-decoration: none;
-  transition: 0.5s;
 }
 .common-btn i.fas {
   margin-left: 4px;
+  transition: 0.5s;
 }
 .common-btn:hover {
   text-decoration: none;
+}
+
+.common-btn:hover i.fas {
+  text-decoration: none;
+  transform: translateX(5px);
 }
 /* === common-css ends === */
 
