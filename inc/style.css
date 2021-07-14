@@ -56,22 +56,51 @@ img {
 .common-btn {
   display: inline-block;
   background-color: var(--common-btn-bg);
+  border: 1px solid var(--common-btn-bg);
   color: #fff;
   padding: 10px 30px;
   text-decoration: none;
+  position: relative;
+  animation: btn-animation 5s ease-in-out infinite;
 }
+
+@keyframes btn-animation {
+  0% {
+    background-color: var(--common-btn-bg);
+  }
+
+  50% {
+    background-color: var(--hero-section-bg);
+  }
+
+  100% {
+    background-color: var(--common-btn-bg);
+  }
+}
+
 .common-btn i.fas {
   margin-left: 4px;
-  transition: 0.5s;
 }
-.common-btn:hover {
+
+.common-btn:hover,
+.common-btn:hover i.fas {
   text-decoration: none;
 }
 
-.common-btn:hover i.fas {
-  text-decoration: none;
-  transform: translateX(5px);
+@keyframes btn-arrow-animation {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
+
 /* === common-css ends === */
 
 /* === hero-section-starts === */
@@ -91,6 +120,10 @@ img {
   color: #fff;
   margin-bottom: 20px;
   font-weight: 700;
+}
+
+.hero-section:hover i.fas {
+  animation: btn-arrow-animation 2s ease-in-out infinite;
 }
 /* === hero-section-ends === */
 
@@ -153,6 +186,10 @@ img {
   color: #6c6c6c;
   line-height: 28px;
   margin-bottom: 18px;
+}
+
+.highlights-section:hover i.fas {
+  animation: btn-arrow-animation 2s ease-in-out infinite;
 }
 /* === highlights-section ends === */
 
