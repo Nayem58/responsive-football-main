@@ -272,6 +272,8 @@ img {
   border-bottom-right-radius: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  animation: none;
+  cursor: pointer;
 }
 /* === newsletter-subscription-section ends === */
 
