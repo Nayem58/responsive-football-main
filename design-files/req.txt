@@ -1,0 +1,8 @@
+#1 - Menu option is optional (no bonus or minus mark)
+#2 - Icons must be used, something needs to be happening (like hover effects, animation) while hovering on the banner/buttons
+#3 - There will be minimum of 9-12 players' cards
+#4 - Copa Highlights is optional
+#5 - Footer must be built (there will be minimum 4 icons, and also copyright icon must be there too)
+#6 - Minimum mobile responsive (1 cards per row)
+#7 - Should use proper comments before/after each sections
+#8 - For bonus marks, 2 different sections should added after the Highlights section
