@@ -61,7 +61,7 @@ img {
   padding: 10px 30px;
   text-decoration: none;
   position: relative;
-  animation: btn-animation 5s ease-in-out infinite;
+  animation: btn-animation 2s ease-in-out infinite;
 }
 
 @keyframes btn-animation {
@@ -112,6 +112,43 @@ img {
   padding-top: 70px;
   padding-bottom: 70px;
   min-height: 677px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section:before,
+.hero-section:after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 1px solid var(--common-btn-bg);
+  border-radius: 50%;
+  bottom: -50px;
+  right: -50px;
+  animation: circle-animation 5s ease-out infinite;
+  opacity: 0;
+}
+
+.hero-section:before {
+  animation: circle-animation 5s ease-out infinite;
+}
+.hero-section:after {
+  animation: circle-animation 5s ease-out 2s infinite;
+}
+
+@keyframes circle-animation {
+  0% {
+    width: 100px;
+    height: 100px;
+    opacity: 1;
+  }
+
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
 }
 
 .hero-section h1 {
