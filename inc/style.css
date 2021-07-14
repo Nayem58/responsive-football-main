@@ -434,7 +434,7 @@ footer p {
 
   /* === youtube-video-section starts === */
   .youtube-video-section .youtube-gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 560px;
   }
   /* === youtube-video-section ends === */
 }
@@ -495,6 +495,12 @@ footer p {
     line-height: 40px;
   }
   /* === highlights-section ends === */
+
+  /* === youtube-video-section starts === */
+  .youtube-video-section .youtube-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  /* === youtube-video-section ends === */
 
   /* === newsletter-subscription-section starts === */
   .newsletter-subscription-section {
