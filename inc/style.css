@@ -72,10 +72,12 @@ img {
 /* === hero-section-starts === */
 .hero-section {
   background-color: var(--hero-section-bg);
-  min-height: 677px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  min-height: 677px;
 }
 
 .hero-section h1 {
@@ -96,23 +98,23 @@ img {
   justify-content: center;
 }
 
-.players-cards-grid {
+.players-cards-section .players-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 330px);
   grid-gap: 30px;
   justify-content: center;
 }
 
-.players-cards-grid .player-card-box {
+.players-cards-section .players-cards-grid .player-card-box {
   padding: 15px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
 }
 
-.players-cards-grid .player-card-box .img-box {
+.players-cards-section .players-cards-grid .player-card-box .img-box {
   margin-bottom: 15px;
 }
 
-.players-cards-grid .player-card-box .players-name {
+.players-cards-section .players-cards-grid .player-card-box .players-name {
   font-size: 28px;
   font-weight: 700;
   line-height: 40px;
@@ -120,11 +122,106 @@ img {
   color: var(--hero-section-bg);
 }
 
-.players-cards-grid .player-card-box .players-short-desc {
+.players-cards-section
+  .players-cards-grid
+  .player-card-box
+  .players-short-desc {
   color: #6c6c6c;
   line-height: 26px;
 }
 /* === players-cards-section ends === */
+
+/* === highlights-section starts === */
+.highlights-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.highlights-section h2 {
+  font-size: 48px;
+  color: var(--hero-section-bg);
+  line-height: 60px;
+  margin-bottom: 18px;
+}
+
+.highlights-section p {
+  color: #6c6c6c;
+  line-height: 28px;
+  margin-bottom: 18px;
+}
+/* === highlights-section ends === */
+
+/* === newsletter-subscription-section starts === */
+.newsletter-subscription-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--hero-section-bg);
+}
+
+.newsletter-subscription-section form {
+  display: flex;
+  justify-content: center;
+}
+
+.newsletter-subscription-section form input {
+  width: 600px;
+  max-width: 100%;
+  padding: 20px;
+  border: 0;
+  font-size: 20px;
+  color: var(--common-btn-bg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.newsletter-subscription-section form input::placeholder {
+  color: #c3c3c3;
+}
+
+.newsletter-subscription-section form button {
+  font-size: 20px;
+  border: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+/* === newsletter-subscription-section ends === */
+
+/* === youtube-video-section starts === */
+.youtube-video-section {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+
+.youtube-video-section h3 {
+  font-size: 38px;
+  color: var(--hero-section-bg);
+  line-height: 50px;
+  margin-bottom: 18px;
+}
+
+.youtube-video-section .youtube-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  justify-content: center;
+}
+
+.youtube-video-section .youtube-gallery-grid .youtube-video-box {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+}
+
+.youtube-video-section .youtube-gallery-grid .youtube-video-box iframe {
+  max-width: 100%;
+  border-radius: 10px;
+}
+/* === youtube-video-section ends === */
 
 /* === footer starts === */
 footer {
@@ -167,3 +264,125 @@ footer p {
   font-size: 18px;
 }
 /* === footer ends === */
+
+/* === media-query starts === */
+@media (max-width: 991px) {
+  /* === hero-section starts === */
+  .hero-section {
+    min-height: min-content;
+  }
+
+  .hero-section .width-50-percentage h1 {
+    font-size: 45px;
+    line-height: 60px;
+  }
+  /* === hero-section ends === */
+
+  /* === players-cards-section starts === */
+  .players-cards-section .players-cards-grid {
+    grid-template-columns: repeat(2, 330px);
+  }
+  /* === players-cards-section ends === */
+
+  /* === highlights-section starts */
+  .highlights-section h2 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  /* === highlights-section ends */
+
+  /* === youtube-video-section starts === */
+  .youtube-video-section .youtube-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  /* === youtube-video-section ends === */
+}
+
+@media (max-width: 767px) {
+  /* === common-css starts === */
+  .width-50-percentage {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .width-50-percentage:first-child {
+    margin-bottom: 50px;
+  }
+  /* === common-css ends === */
+
+  /* === hero-section starts === */
+  .hero-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .hero-section .width-50-percentage h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  /* === hero-section ends === */
+
+  /* === players-cards-section starts === */
+  .players-cards-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .players-cards-section .players-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  /* === players-cards-section ends === */
+
+  /* === highlights-section starts === */
+  .highlights-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .highlights-section h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  /* === highlights-section ends === */
+
+  /* === newsletter-subscription-section starts === */
+  .newsletter-subscription-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .newsletter-subscription-section form input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .newsletter-subscription-section form input::placeholder {
+    font-size: 10px;
+  }
+
+  .newsletter-subscription-section form button {
+    font-size: 14px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  /* === newsletter-subscription-section ends === */
+
+  /* === youtube-video-section starts === */
+  .youtube-video-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .youtube-video-section h3 {
+    font-size: 24px;
+    line-height: 38px;
+  }
+  /* === youtube-video-section ends === */
+
+  /* === footer starts === */
+  footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  /* === footer ends === */
+}
+/* === media-query ends === */
